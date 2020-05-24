@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/header"
+            android:text="@string/leg_quiz"/>
+
+        <EditText
+            android:id="@+id/name_edit_text"
+            style="@style/editText"
+            android:hint="@string/your_name"
+            android:inputType="textCapWords" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            android:text="@string/select_correct_answer"/>
+
+
+        <TextView
+            style="@style/questions"
+            android:text="@string/how_many_legs_has_a_cat"/>
+
+        <RadioGroup
+            style="@style/radioGroup">
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_0"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_2"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_4"
+                android:onClick="one_right_answer"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_6"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_8"/>
+
+        </RadioGroup>
+
+        <TextView
+            style="@style/questions"
+            android:text="@string/how_many_legs_has_a_dolphin"/>
+
+        <RadioGroup
+            style="@style/radioGroup">
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_0"
+                android:onClick="two_right_answer"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_2"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_4"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_6"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_8"/>
+
+        </RadioGroup>
+
+        <TextView
+            style="@style/questions"
+            android:text="@string/how_many_legs_has_a_octopus"/>
+
+        <RadioGroup
+            style="@style/radioGroup">
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_0"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_2"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_4"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_6"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_8"
+                android:onClick="three_right_answer"/>
+
+        </RadioGroup>
+
+        <TextView
+            style="@style/questions"
+            android:text="@string/how_many_legs_has_a_human"/>
+
+        <RadioGroup
+            style="@style/radioGroup">
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_0"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_2"
+                android:onClick="four_right_answer"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_4"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_6"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_8"/>
+
+        </RadioGroup>
+
+        <TextView
+            style="@style/questions"
+            android:text="@string/how_many_legs_has_a_dog"/>
+
+        <RadioGroup
+            style="@style/radioGroup">
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_0"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_2"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_4"
+                android:onClick="five_right_answer"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_6"/>
+
+            <RadioButton
+                style="@style/radioButton"
+                android:text="@string/_8"/>
+
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/email_me_check_box"
+            style="@style/checkBox"
+            android:text="@string/send_me_results_to_email"/>
+
+        <Button
+            android:id="@+id/submit_answer_button"
+            style="@style/button"
+            android:text="@string/submit"
+            android:onClick="submit_answers"/>
+
+        <TextView
+            android:id="@+id/results_text_view"
+            style="@style/results"/>
+
+        <EditText
+            android:id="@+id/input_email"
+            style="@style/editText"
+            android:hint="@string/your_email_address"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/send_mail_button"
+            style="@style/button"
+            android:text="@string/email_me_my_results"
+            android:onClick="send_mail_click"
+            android:visibility="gone"/>
+
+     </LinearLayout>
+
+</ScrollView>

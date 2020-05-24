@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="leg_quiz">Leg Quiz</string>
+    <string name="select_correct_answer">Select correct answer.</string>
+    <string name="how_many_legs_has_a_cat">How many legs has a cat?</string>
+    <string name="how_many_legs_has_a_dolphin">How many legs has a dolphin?</string>
+    <string name="how_many_legs_has_a_octopus">How many legs has a octopus?</string>
+    <string name="how_many_legs_has_a_human">How many legs has a human?</string>
+    <string name="how_many_legs_has_a_dog">How many legs has a dog?</string>
+    <string name="email_me_my_results">Email me my results</string>
+    <string name="submit">Submit</string>
+    <string name="_0">0</string>
+    <string name="_2">2</string>
+    <string name="_4">4</string>
+    <string name="_6">6</string>
+    <string name="_8">8</string>
+    <string name="your_name">Your name</string>
+    <string name="send_me_results_to_email">Send me results to email.</string>
+    <string name="your_email_address">Your email address</string>
+</resources>
