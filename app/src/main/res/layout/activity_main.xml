@@ -22,6 +22,7 @@
             android:inputType="textCapWords" />
 
         <TextView
+            android:id="@+id/manual"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
@@ -37,24 +38,24 @@
             style="@style/radioGroup">
 
             <RadioButton
-                style="@style/radioButton"
+                style="@style/answerButton"
                 android:text="@string/_0"/>
 
             <RadioButton
-                style="@style/radioButton"
+                style="@style/answerButton"
                 android:text="@string/_2"/>
 
             <RadioButton
-                style="@style/radioButton"
+                style="@style/answerButton"
                 android:text="@string/_4"
                 android:onClick="one_right_answer"/>
 
             <RadioButton
-                style="@style/radioButton"
+                style="@style/answerButton"
                 android:text="@string/_6"/>
 
             <RadioButton
-                style="@style/radioButton"
+                style="@style/answerButton"
                 android:text="@string/_8"/>
 
         </RadioGroup>
@@ -67,24 +68,24 @@
             style="@style/radioGroup">
 
             <RadioButton
-                style="@style/radioButton"
+                style="@style/answerButton"
                 android:text="@string/_0"
                 android:onClick="two_right_answer"/>
 
             <RadioButton
-                style="@style/radioButton"
+                style="@style/answerButton"
                 android:text="@string/_2"/>
 
             <RadioButton
-                style="@style/radioButton"
+                style="@style/answerButton"
                 android:text="@string/_4"/>
 
             <RadioButton
-                style="@style/radioButton"
+                style="@style/answerButton"
                 android:text="@string/_6"/>
 
             <RadioButton
-                style="@style/radioButton"
+                style="@style/answerButton"
                 android:text="@string/_8"/>
 
         </RadioGroup>
@@ -97,23 +98,23 @@
             style="@style/radioGroup">
 
             <RadioButton
-                style="@style/radioButton"
+                style="@style/answerButton"
                 android:text="@string/_0"/>
 
             <RadioButton
-                style="@style/radioButton"
+                style="@style/answerButton"
                 android:text="@string/_2"/>
 
             <RadioButton
-                style="@style/radioButton"
+                style="@style/answerButton"
                 android:text="@string/_4"/>
 
             <RadioButton
-                style="@style/radioButton"
+                style="@style/answerButton"
                 android:text="@string/_6"/>
 
             <RadioButton
-                style="@style/radioButton"
+                style="@style/answerButton"
                 android:text="@string/_8"
                 android:onClick="three_right_answer"/>
 
@@ -121,67 +122,44 @@
 
         <TextView
             style="@style/questions"
-            android:text="@string/how_many_legs_has_a_human"/>
+            android:text="@string/how_many_legs_has_a_pig_write_number"/>
 
-        <RadioGroup
-            style="@style/radioGroup">
-
-            <RadioButton
-                style="@style/radioButton"
-                android:text="@string/_0"/>
-
-            <RadioButton
-                style="@style/radioButton"
-                android:text="@string/_2"
-                android:onClick="four_right_answer"/>
-
-            <RadioButton
-                style="@style/radioButton"
-                android:text="@string/_4"/>
-
-            <RadioButton
-                style="@style/radioButton"
-                android:text="@string/_6"/>
-
-            <RadioButton
-                style="@style/radioButton"
-                android:text="@string/_8"/>
-
-        </RadioGroup>
+        <EditText
+            android:id="@+id/four_answer_text"
+            style="@style/editText"
+            android:hint="@string/write_a_number"
+            android:inputType="number"
+            android:textColor="#FEF9E7"/>
 
         <TextView
             style="@style/questions"
-            android:text="@string/how_many_legs_has_a_dog"/>
+            android:text="@string/who_has_four_legs"/>
 
-        <RadioGroup
+        <LinearLayout
             style="@style/radioGroup">
 
-            <RadioButton
-                style="@style/radioButton"
-                android:text="@string/_0"/>
+            <CheckBox
+                android:id="@+id/five_right_answer_a"
+                style="@style/answerButton"
+                android:text="@string/turtle"/>
 
-            <RadioButton
-                style="@style/radioButton"
-                android:text="@string/_2"/>
+            <CheckBox
+                android:id="@+id/five_wrong_answer"
+                style="@style/answerButton"
+                android:text="@string/snake"/>
 
-            <RadioButton
-                style="@style/radioButton"
-                android:text="@string/_4"
-                android:onClick="five_right_answer"/>
+            <CheckBox
+                android:id="@+id/five_right_answer_b"
+                style="@style/answerButton"
+                android:text="@string/horse"/>
 
-            <RadioButton
-                style="@style/radioButton"
-                android:text="@string/_6"/>
 
-            <RadioButton
-                style="@style/radioButton"
-                android:text="@string/_8"/>
-
-        </RadioGroup>
+        </LinearLayout>
 
         <CheckBox
             android:id="@+id/email_me_check_box"
             style="@style/checkBox"
+            android:layout_marginTop="32dp"
             android:text="@string/send_me_results_to_email"/>
 
         <Button

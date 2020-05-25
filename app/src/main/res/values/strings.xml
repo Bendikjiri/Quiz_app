@@ -17,4 +17,11 @@
     <string name="your_name">Your name</string>
     <string name="send_me_results_to_email">Send me results to email.</string>
     <string name="your_email_address">Your email address</string>
+    <string name="who_has_four_legs">Who has four legs?</string>
+    <string name="turtle">Turtle</string>
+    <string name="snake">Snake</string>
+    <string name="horse">Horse</string>
+    <string name="spider">Spider</string>
+    <string name="how_many_legs_has_a_pig_write_number">How many legs has a pig?</string>
+    <string name="write_a_number">Write a number</string>
 </resources>

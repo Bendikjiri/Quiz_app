@@ -46,19 +46,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void four_right_answer(View view) {
-        boolean answerFourChecked = ((RadioButton) view).isChecked();
-        if (answerFourChecked) {
+    private int four_right_answer() {
+        EditText answerFourView = findViewById(R.id.four_answer_text);
+        String answerFour = answerFourView.getText().toString();
+        int answerFourNumber=Integer.parseInt(answerFour);
+        if (answerFourNumber == 4) {
             score += 1;
-        }
-    }
-
-    public void five_right_answer(View view) {
-        boolean answerFiveChecked = ((RadioButton) view).isChecked();
-        if (!answerFiveChecked) {
-            return;
-        }
-        score += 1;
+        }return score;
     }
 
     public void submit_answers(View view) {
@@ -70,11 +64,27 @@ public class MainActivity extends AppCompatActivity {
         toast.show();
     }
 
+    private int scoreForFifth(){
+        CheckBox answerFiveACheckBox = findViewById(R.id.five_right_answer_a);
+        Boolean answerFiveAChecked = answerFiveACheckBox.isChecked();
+        CheckBox answerFiveBCheckBox = findViewById(R.id.five_right_answer_b);
+        Boolean answerFiveBChecked = answerFiveBCheckBox.isChecked();
+        CheckBox answerFiveWrongCheckBox = findViewById(R.id.five_wrong_answer);
+        Boolean answerFiveWrongChecked = answerFiveBCheckBox.isChecked();
 
+        if (answerFiveAChecked && answerFiveBChecked && !answerFiveWrongChecked) {
+        score += 1;
+        }
+        return score;
+    }
 
     private String showResults() {
         EditText playersName = findViewById(R.id.name_edit_text);
         name = playersName.getText().toString();
+        TextView manualTextView = findViewById(R.id.manual);
+        manualTextView.setVisibility(View.GONE);
+        four_right_answer();
+        scoreForFifth();
 
         String result;
         String emailResult;
@@ -92,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
         //Check if check box is checked
         CheckBox sendByMailCheckBox = findViewById(R.id.email_me_check_box);
         Boolean sendByMail = sendByMailCheckBox.isChecked();
+        sendByMailCheckBox.setVisibility(View.GONE);
 
         //Get email
         EditText emailInput = findViewById(R.id.input_email);
@@ -108,7 +119,6 @@ public class MainActivity extends AppCompatActivity {
 
         return emailResult;
     }
-
 
     public void send_mail_click(View view) {
         EditText emailInput = findViewById(R.id.input_email);
