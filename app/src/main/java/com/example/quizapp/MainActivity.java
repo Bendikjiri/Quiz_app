@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -16,8 +17,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     //global variables
-    int score = 0;
-    String name;
+    private int score = 0;
+    private String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,30 +29,34 @@ public class MainActivity extends AppCompatActivity {
     public void one_right_answer(View view) {
         boolean answerOneChecked = ((RadioButton) view).isChecked();
         if (answerOneChecked) {
-            score += 1;
+            score ++;
         }
     }
 
     public void two_right_answer(View view) {
         boolean answerTwoChecked = ((RadioButton) view).isChecked();
         if (answerTwoChecked) {
-            score += 1;
+            score ++;
         }
     }
 
     public void three_right_answer(View view) {
         boolean answerThreeChecked = ((RadioButton) view).isChecked();
         if (answerThreeChecked) {
-            score += 1;
+            score ++;
         }
     }
 
     private int four_right_answer() {
+        int answerFourNumber = 0;
         EditText answerFourView = findViewById(R.id.four_answer_text);
         String answerFour = answerFourView.getText().toString();
-        int answerFourNumber=Integer.parseInt(answerFour);
+        if (!TextUtils.isEmpty(answerFour)) {
+            answerFourNumber = Integer.parseInt(answerFour);
+        }
+
         if (answerFourNumber == 4) {
-            score += 1;
+            score ++;
         }return score;
     }
 
@@ -70,10 +75,10 @@ public class MainActivity extends AppCompatActivity {
         CheckBox answerFiveBCheckBox = findViewById(R.id.five_right_answer_b);
         Boolean answerFiveBChecked = answerFiveBCheckBox.isChecked();
         CheckBox answerFiveWrongCheckBox = findViewById(R.id.five_wrong_answer);
-        Boolean answerFiveWrongChecked = answerFiveBCheckBox.isChecked();
+        Boolean answerFiveWrongChecked = answerFiveWrongCheckBox.isChecked();
 
         if (answerFiveAChecked && answerFiveBChecked && !answerFiveWrongChecked) {
-        score += 1;
+        score ++;
         }
         return score;
     }
